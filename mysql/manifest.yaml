@@ -30,12 +30,12 @@ kind: Service
 apiVersion: v1
 metadata:
   name: mysql
-  namespace: expense
+  namespace: expense1
 spec:
   selector: # labels are used as selectors
     app: mysql
     tier: mysql
-    project: expense
+    project: expense1
   ports:
   - protocol: TCP
     port: 3306 # service port
