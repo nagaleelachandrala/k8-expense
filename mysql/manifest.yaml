@@ -14,7 +14,7 @@ spec:
     matchLabels:
       app: mysql
       tier: mysql
-      # project: expense1
+      project: expense1
   template:
     metadata:
       labels:
