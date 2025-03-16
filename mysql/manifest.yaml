@@ -14,7 +14,7 @@ spec:
     matchLabels:
       app: mysql
       tier: mysql
-      project: expense1
+      # project: expense1
   template:
     metadata:
       labels:
@@ -26,17 +26,17 @@ spec:
       - name: nginx
         image: nagaleelachandrala/mysql:1.0.0
 ---
-# kind: Service
-# apiVersion: v1
-# metadata:
-#   name: mysql
-#   namespace: expense
-# spec:
-#   selector: # labels are used as selectors
-#     app: mysql
-#     tier: mysql
-#     project: expense
-#   ports:
-#   - protocol: TCP
-#     port: 3306 # service port
-#     targetPort: 3306
+kind: Service
+apiVersion: v1
+metadata:
+  name: mysql
+  namespace: expense
+spec:
+  selector: # labels are used as selectors
+    app: mysql
+    tier: mysql
+    project: expense
+  ports:
+  - protocol: TCP
+    port: 3306 # service port
+    targetPort: 3306
